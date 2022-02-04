@@ -1,15 +1,16 @@
-debug: main.cpp int3.o int2.o float3.o float2.o
+debug: int3.o int2.o float3.o float2.o
 	g++ -g main.cpp -o RasterizedPenguin -Wall int3.o int2.o float3.o float2.o
 	rm *.o
 
-int3.o:
-	g++ -c sources/int3.cpp
+debugLib:
+	g++ -L. -g -Wall -o test main.cpp -lRPtypes -l3Dview
 
-int2.o:
-	g++ -c sources/int2.cpp
+Types:
+	g++ -c -fPIC -o Types/RPtypes.o Types/src/RPTypes.cpp
+	gcc -shared -o libRPtypes.so Types/RPtypes.o
+	rm Types/*.o
 
-float3.o:
-	g++ -c sources/float3.cpp
-
-float2.o:
-	g++ -c sources/float2.cpp
+3Dview:
+	g++ -c -fPIC -o 3Dview/3Dview.o 3Dview/src/3Dview.cpp
+	gcc -shared -o lib3Dview.so 3Dview/3Dview.o
+	rm 3Dview/*.o

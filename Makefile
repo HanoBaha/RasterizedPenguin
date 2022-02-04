@@ -14,3 +14,6 @@ Types:
 	g++ -c -fPIC -o 3Dview/3Dview.o 3Dview/src/3Dview.cpp
 	gcc -shared -o lib3Dview.so 3Dview/3Dview.o
 	rm 3Dview/*.o
+
+tmp:
+	export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH

@@ -1,4 +1,4 @@
-#include "headers/3Dview.h"
+#include "../include/3Dview.h"
 
 #include "camera.cpp"
 #include "mesh.cpp"

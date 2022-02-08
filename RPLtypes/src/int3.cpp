@@ -1,4 +1,4 @@
-#include "../headers/int3.h"
+#include "../include/int3.h"
 
 #include <iostream>
 #include <math.h>

@@ -1,4 +1,4 @@
-#include "../headers/float2.h"
+#include "../include/float2.h"
 
 #include <iostream>
 #include <math.h>

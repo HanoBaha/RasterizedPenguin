@@ -1,4 +1,4 @@
-#include "../headers/int2.h"
+#include "../include/int2.h"
 
 #include <iostream>
 #include <math.h>
